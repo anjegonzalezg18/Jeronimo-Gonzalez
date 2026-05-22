@@ -1,15 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <link href="img/inem.png"rel="icon">
+    <link href="img/inem.png" rel="icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeronimo</title>
+
+    <style>
+        :root {
+            --fondo: #0f172a;
+            --fondo-suave: #1e293b;
+            --tarjeta: rgba(255, 255, 255, 0.08);
+            --texto: #e2e8f0;
+            --titulo: #f8fafc;
+            --accent: #38bdf8;
+            --accent2: #a78bfa;
+            --borde: rgba(255, 255, 255, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, var(--fondo), var(--fondo-suave));
+            color: var(--texto);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .contenedor {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--tarjeta);
+            border: 1px solid var(--borde);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 2.2rem;
+            color: var(--titulo);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .subtitulo {
+            text-align: center;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        .tarjeta {
+            background: rgba(15, 23, 42, 0.55);
+            border: 1px solid var(--borde);
+            border-left: 5px solid var(--accent);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .tarjeta h2 {
+            margin-top: 0;
+            color: var(--accent);
+            font-size: 1.3rem;
+        }
+
+        .tarjeta p {
+            line-height: 1.7;
+            font-size: 1.05rem;
+            margin-bottom: 0;
+        }
+
+        .video {
+            margin-top: 25px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--borde);
+        }
+
+        iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            display: block;
+            border: 0;
+        }
+
+        .decoracion {
+            height: 5px;
+            width: 120px;
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+            margin: 0 auto 25px auto;
+            border-radius: 50px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 12px;
+            }
+
+            .contenedor {
+                padding: 20px;
+                border-radius: 16px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .tarjeta {
+                padding: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>Nací en Bogotá-Colombia en 2010. En una familia humilde soy el hijo menor de mis papás y mi hermana tuvo que cuidarme desde chiquita. Siempre me destaque en los deportes y en los estudios. Actualmente me encuentro en el ultimo grado de bachillerap y espero tener un futuro brillante.</p>
-    <p>Albert Einstein: Albert Einstein nació en Ulm, Württemberg, Alemania, el 14 de marzo de 1879. Seis semanas después, la familia se trasladó a Múnich, donde comenzó sus estudios en el Luitpold Gymnasium. Posteriormente, se mudaron a Italia y Albert continuó su formación en Aarau, Suiza. </p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/p7YpVl35pac?si=Mef3k5zw-RTAlIf0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="contenedor">
+        <h1>Jeronimo</h1>
+        <div class="decoracion"></div>
+        <p class="subtitulo">Una página con estilo moderno, elegante y colores agradables</p>
 
+        <div class="tarjeta">
+            <h2>Sobre mí</h2>
+            <p>
+                Nací en Bogotá-Colombia en 2010. En una familia humilde soy el hijo menor de mis papás y mi hermana tuvo que cuidarme desde chiquita. Siempre me destaque en los deportes y en los estudios. Actualmente me encuentro en el ultimo grado de bachillerato y espero tener un futuro brillante.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <h2>Albert Einstein</h2>
+            <p>
+                Albert Einstein nació en Ulm, Württemberg, Alemania, el 14 de marzo de 1879. Seis semanas después, la familia se trasladó a Múnich, donde comenzó sus estudios en el Luitpold Gymnasium. Posteriormente, se mudaron a Italia y Albert continuó su formación en Aarau, Suiza.
+            </p>
+        </div>
+
+        <div class="video">
+            <iframe
+                src="https://www.youtube.com/embed/p7YpVl35pac?si=Mef3k5zw-RTAlIf0"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
 </body>
 </html>
